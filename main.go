@@ -2,12 +2,11 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"wxcloudrun-golang/msg"
 )
 
 func main() {
 
 	r := gin.Default()
-	r.GET("/good", func(c *gin.Context) {
-		c.JSON(200, gin.H{})
-	})
+	r.GET("/send", msg.LetSendMsg)
 }
